@@ -1,0 +1,170 @@
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import '/../constants/app_colors.dart';
+import '/../widgets/primary_button.dart';
+import '/../widgets/otp_field.dart';
+
+class VerificationScreen extends StatelessWidget {
+  const VerificationScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColors.background,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // --- TOP NAVIGATION: BACK ---
+              Padding(
+                padding: const EdgeInsets.only(top: 18),
+                child: GestureDetector(
+                  onTap: () => context.pop(),
+                  child: Row(
+                    children: const [
+                      Icon(Icons.arrow_back, color: AppColors.textWhite, size: 20),
+                      SizedBox(width: 10),
+                      Text(
+                        'Back',
+                        style: TextStyle(
+                          fontFamily: 'InriaSerif',
+                          fontSize: 14,
+                          color: AppColors.textWhite,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 50),
+
+              // --- HEADER ---
+              Row(
+                children: const [
+                  Text(
+                    "You've Got Mail",
+                    style: TextStyle(
+                      fontFamily: 'InriaSerif',
+                      fontSize: 32,
+                      fontWeight: FontWeight.w700,
+                      color: AppColors.textWhite,
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  Text(
+                    '📩', // Mail emoji from UI
+                    style: TextStyle(fontSize: 28),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 15),
+
+              // --- DESCRIPTION ---
+              const Text(
+                'We have sent the OTP verification code to your email address. Check your email and enter the code below',
+                style: TextStyle(
+                  fontFamily: 'InriaSerif',
+                  fontSize: 16,
+                  height: 1.4,
+                  color: AppColors.textWhite,
+                ),
+              ),
+
+              const SizedBox(height: 50),
+
+              // --- OTP INPUT FIELDS ---
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  OtpInputField(first: true),
+                  OtpInputField(),
+                  OtpInputField(),
+                  OtpInputField(last: true),
+                ],
+              ),
+
+              const SizedBox(height: 40),
+
+              // --- RESEND CODE TEXT ---
+              const Center(
+                child: Text(
+                  'Resend the code',
+                  style: TextStyle(
+                    fontFamily: 'InriaSerif',
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    color: AppColors.textWhite,
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 80),
+
+              // --- CONFIRM BUTTON ---
+              PrimaryButton(
+                text: 'Confirm',
+                onPressed: () => context.push('/reset_password'),
+              ),
+
+              const SizedBox(height: 150),
+
+              // --- CENTERED SOCIAL SECTION ---
+              Row(
+                children: [
+                  const Expanded(child: Divider(color: Colors.white, thickness: 1)),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                    child: Text(
+                      'or connect with',
+                      style: TextStyle(
+                        fontFamily: 'InriaSerif',
+                        fontSize: 14,
+                        color: AppColors.textWhite,
+                      ),
+                    ),
+                  ),
+                  const Expanded(child: Divider(color: Colors.white, thickness: 1)),
+                ],
+              ),
+
+              const SizedBox(height: 30),
+
+              // --- SOCIAL ICONS ---
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _socialIcon('assets/icons/facebook-fill.png', Icons.facebook),
+                  const SizedBox(width: 20),
+                  _socialIcon('assets/icons/google-fill.png', Icons.g_mobiledata),
+                  const SizedBox(width: 20),
+                  _socialIcon('assets/icons/apple.png', Icons.apple),
+                ],
+              ),
+              
+              const SizedBox(height: 30),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _socialIcon(String assetPath, IconData fallback) {
+    return Image.asset(
+      assetPath,
+      width: 32,
+      height: 32,
+      color: Colors.white,
+      errorBuilder: (context, error, stackTrace) => Icon(
+        fallback,
+        color: Colors.white,
+        size: 32,
+      ),
+    );
+  }
+}
