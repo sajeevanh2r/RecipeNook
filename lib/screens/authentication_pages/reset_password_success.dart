@@ -18,9 +18,9 @@ class ResetSuccessScreen extends StatelessWidget {
             children: [
               const Spacer(flex: 2),
 
-              // 1. SUCCESS ILLUSTRATION (Chef with Key)
+              
               Image.asset(
-                'assets/images/image7.png', // Ensure this matches your asset name
+                'assets/images/image7.png', 
                 width: 280,
                 height: 280,
                 fit: BoxFit.contain,
@@ -33,7 +33,7 @@ class ResetSuccessScreen extends StatelessWidget {
 
               const SizedBox(height: 40),
 
-              // 2. TITLE
+              
               const Text(
                 'Reset Password\nSuccessful!',
                 textAlign: TextAlign.center,
@@ -48,7 +48,7 @@ class ResetSuccessScreen extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // 3. SUBTITLE
+              
               Text(
                 'Your password has been successfully\nchanged',
                 textAlign: TextAlign.center,
@@ -62,16 +62,16 @@ class ResetSuccessScreen extends StatelessWidget {
 
               const SizedBox(height: 200),
 
-              // 4. GO TO LOGIN BUTTON
+              
               PrimaryButton(
                 text: 'Go to Login',
                 onPressed: () {
-                  // Use .go to clear the navigation stack and return to Login
+                  
                   context.go('/login');
                 },
               ),
               
-              const SizedBox(height: 120), // Bottom padding
+              const SizedBox(height: 120), 
             ],
           ),
         ),

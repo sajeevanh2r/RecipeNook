@@ -13,12 +13,12 @@ class ResetPasswordScreen extends StatelessWidget {
       backgroundColor: AppColors.background,
       body: SafeArea(
         child: SingleChildScrollView(
-          // Using a consistent padding to match the Figma design
+          
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // 1. TOP NAVIGATION
+              
               Padding(
                 padding: const EdgeInsets.only(top: 20),
                 child: GestureDetector(
@@ -42,7 +42,7 @@ class ResetPasswordScreen extends StatelessWidget {
 
               const SizedBox(height: 50),
 
-              // 2. HEADER (Fixed Overflow with Wrap)
+             
               Wrap(
                 crossAxisAlignment: WrapCrossAlignment.center,
                 children: const [
@@ -65,7 +65,7 @@ class ResetPasswordScreen extends StatelessWidget {
 
               const SizedBox(height: 15),
 
-              // 3. DESCRIPTION
+              
               const Text(
                 'Enter your new password if you forget it, then you have to do forgot password.',
                 style: TextStyle(
@@ -78,7 +78,7 @@ class ResetPasswordScreen extends StatelessWidget {
 
               const SizedBox(height: 50),
 
-              // 4. INPUT FIELDS
+              
               const CustomTextField(
                 hintText: 'Password',
                 isPassword: true,
@@ -89,10 +89,10 @@ class ResetPasswordScreen extends StatelessWidget {
                 isPassword: true,
               ),
 
-              // Added flexible spacing to push button down like in the design
+              
               const SizedBox(height: 80),
 
-              // 5. CONTINUE BUTTON
+              
               PrimaryButton(
                 text: 'Continue',
                 onPressed: () => context.push('/reset_password_success'),
@@ -100,7 +100,7 @@ class ResetPasswordScreen extends StatelessWidget {
 
               const SizedBox(height: 120),
 
-              // 6. OR CONNECT WITH
+              
               Row(
                 children: [
                   const Expanded(child: Divider(color: Colors.white)),
@@ -121,7 +121,7 @@ class ResetPasswordScreen extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              // 7. SOCIAL ICONS (White symbols)
+              
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -147,7 +147,7 @@ class ResetPasswordScreen extends StatelessWidget {
       width: 32,
       height: 32,
       color: Colors.white,
-      // Prevents the "!" error if images are missing
+      
       errorBuilder: (context, error, stackTrace) => Icon(
         fallback,
         color: Colors.white,

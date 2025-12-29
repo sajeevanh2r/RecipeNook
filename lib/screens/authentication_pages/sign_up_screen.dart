@@ -15,7 +15,7 @@ class SignUpScreen extends StatelessWidget {
       backgroundColor: AppColors.background,
       body: Stack(
         children: [
-          /// Bottom-left decorative plate image
+          
           Positioned(
             bottom: 0,
             left: 0,
@@ -29,7 +29,7 @@ class SignUpScreen extends StatelessWidget {
             ),
           ),
 
-          /// Main content
+          
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -60,7 +60,7 @@ class SignUpScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  /// Header
+                 
                   const Text(
                     'Sign Up',
                     style: TextStyle(
@@ -82,7 +82,7 @@ class SignUpScreen extends StatelessWidget {
 
                   const SizedBox(height: 48),
 
-                  /// Form fields
+                  
                   const CustomTextField(hintText: 'Full Name'),
                   const SizedBox(height: 20),
                   const CustomTextField(hintText: 'Email'),
@@ -94,7 +94,7 @@ class SignUpScreen extends StatelessWidget {
 
                   const SizedBox(height: 44),
 
-                  /// Sign up button
+                
                   PrimaryButton(
                     text: 'Sign Up',
                     onPressed: () => context.go('/home'),
@@ -102,12 +102,12 @@ class SignUpScreen extends StatelessWidget {
 
                   const SizedBox(height: 100),
 
-                  /// Divider row
+                  
                  Row(
   children: [
-    const Spacer(), // pushes content to the right side
+    const Spacer(), 
 
-    // Divider line
+    
     const SizedBox(
       width: 140,
       child: Divider(indent: 10,
@@ -133,7 +133,7 @@ class SignUpScreen extends StatelessWidget {
 
                   const SizedBox(height: 28),
 
-                  /// Social icons
+                  
                   Row(
   mainAxisAlignment: MainAxisAlignment.end,
   children: const [
@@ -155,7 +155,7 @@ class SignUpScreen extends StatelessWidget {
 ),
 
 
-                  const Spacer(), // fills remaining space cleanly
+                  const Spacer(), 
                 ],
               ),
             ),
@@ -166,7 +166,7 @@ class SignUpScreen extends StatelessWidget {
   }
 }
 
-/// Reusable social icon widget
+
 class _SocialIcon extends StatelessWidget {
   final String assetPath;
   final IconData fallback;

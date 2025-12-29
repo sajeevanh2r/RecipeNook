@@ -17,7 +17,7 @@ class VerificationScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // --- TOP NAVIGATION: BACK ---
+              
               Padding(
                 padding: const EdgeInsets.only(top: 18),
                 child: GestureDetector(
@@ -55,7 +55,7 @@ class VerificationScreen extends StatelessWidget {
                   ),
                   SizedBox(width: 10),
                   Text(
-                    '📩', // Mail emoji from UI
+                    '📩', 
                     style: TextStyle(fontSize: 28),
                   ),
                 ],
@@ -63,7 +63,7 @@ class VerificationScreen extends StatelessWidget {
 
               const SizedBox(height: 15),
 
-              // --- DESCRIPTION ---
+            
               const Text(
                 'We have sent the OTP verification code to your email address. Check your email and enter the code below',
                 style: TextStyle(
@@ -76,7 +76,7 @@ class VerificationScreen extends StatelessWidget {
 
               const SizedBox(height: 50),
 
-              // --- OTP INPUT FIELDS ---
+          
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
@@ -89,7 +89,7 @@ class VerificationScreen extends StatelessWidget {
 
               const SizedBox(height: 40),
 
-              // --- RESEND CODE TEXT ---
+              
               const Center(
                 child: Text(
                   'Resend the code',
@@ -105,7 +105,7 @@ class VerificationScreen extends StatelessWidget {
 
               const SizedBox(height: 80),
 
-              // --- CONFIRM BUTTON ---
+            
               PrimaryButton(
                 text: 'Confirm',
                 onPressed: () => context.push('/reset_password'),
@@ -113,7 +113,7 @@ class VerificationScreen extends StatelessWidget {
 
               const SizedBox(height: 150),
 
-              // --- CENTERED SOCIAL SECTION ---
+              
               Row(
                 children: [
                   const Expanded(child: Divider(color: Colors.white, thickness: 1)),
@@ -134,7 +134,7 @@ class VerificationScreen extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              // --- SOCIAL ICONS ---
+              
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

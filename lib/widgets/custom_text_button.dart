@@ -10,7 +10,7 @@ class CustomTextButton extends StatelessWidget {
     super.key,
     required this.text,
     required this.onPressed,
-    this.color = const Color(0xFF20B2AA), // Default Teal from UI
+    this.color = const Color(0xFF20B2AA), 
     this.useSerif = false,
   });
 

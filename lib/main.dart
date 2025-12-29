@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'routes/app_router.dart'; // <--- Ensure this path is correct
+import 'routes/app_router.dart'; 
 import 'theme/app_theme.dart';
 
 void main() {
@@ -17,8 +17,7 @@ class RecipeNookApp extends StatelessWidget {
       theme: AppTheme.darkTheme,
       themeMode: ThemeMode.dark,
       
-      // THIS IS THE KEY FIX:
-      // AppRouter (the class) .router (the static variable)
+      
       routerConfig: AppRouter.router, 
     );
   }

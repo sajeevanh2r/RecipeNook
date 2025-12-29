@@ -17,9 +17,9 @@ class ForgotPasswordScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // --- TOP NAVIGATION: BACK TO LOGIN ---
+            
               Padding(
-                padding: const EdgeInsets.only(top: 18), // ✅ ADJUST HERE
+                padding: const EdgeInsets.only(top: 18),
                 child: GestureDetector(
                   onTap: () => context.go('/login'),
                   child: Row(
@@ -45,7 +45,7 @@ class ForgotPasswordScreen extends StatelessWidget {
 
               const SizedBox(height: 40),
 
-              // --- HEADER ---
+              
               Row(
                 children: const [
                   Text(
@@ -67,7 +67,7 @@ class ForgotPasswordScreen extends StatelessWidget {
 
               const SizedBox(height: 15),
 
-              // --- DESCRIPTION ---
+             
               const Text(
                 'Enter your email address. We will send an OTP code for verification in the next step',
                 style: TextStyle(
@@ -87,7 +87,7 @@ class ForgotPasswordScreen extends StatelessWidget {
 
               const SizedBox(height: 180),
 
-              // --- CONTINUE BUTTON ---
+              
               PrimaryButton(
                 text: 'Continue',
                 onPressed: () => context.push('/verification'),
@@ -95,7 +95,7 @@ class ForgotPasswordScreen extends StatelessWidget {
 
               const SizedBox(height: 150),
 
-              // --- CENTERED SOCIAL SECTION ---
+              
               Row(
                 children: [
                   const Expanded(
@@ -120,7 +120,7 @@ class ForgotPasswordScreen extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              // --- SOCIAL ICONS ---
+              
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

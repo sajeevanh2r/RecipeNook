@@ -15,7 +15,7 @@ class LoginScreen extends StatelessWidget {
       backgroundColor: AppColors.background,
       body: Stack(
         children: [
-          /// Bottom-left decorative plate image
+          
           Positioned(
             bottom: 0,
             left: 0,
@@ -29,14 +29,14 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
 
-          /// Main content
+          
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  /// Sign up (top-right)
+                  
                   Align(
                     alignment: Alignment.topRight,
                     child: TextButton(
@@ -60,7 +60,7 @@ class LoginScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  /// Header
+                  
                   const Text(
                     'Login',
                     style: TextStyle(
@@ -82,7 +82,7 @@ class LoginScreen extends StatelessWidget {
 
                   const SizedBox(height: 48),
 
-                  /// Form fields
+                  
                   const CustomTextField(hintText: 'Email'),
                   const SizedBox(height: 20),
                   const CustomTextField(
@@ -92,7 +92,7 @@ class LoginScreen extends StatelessWidget {
 
                   const SizedBox(height: 44),
 
-                  /// Login button
+                 
                   PrimaryButton(
                     text: 'Login',
                     onPressed: () => context.go('/home'),
@@ -100,7 +100,7 @@ class LoginScreen extends StatelessWidget {
 
                   const SizedBox(height: 16),
 
-                  /// Forgot password
+                 
                   Align(
                     alignment: Alignment.centerRight,
                     child: TextButton(
@@ -120,7 +120,7 @@ class LoginScreen extends StatelessWidget {
 
                   const SizedBox(height: 120),
 
-                  /// Divider row
+                  
                   Row(
                     children: [
                       const Spacer(),
@@ -146,7 +146,7 @@ class LoginScreen extends StatelessWidget {
 
                   const SizedBox(height: 28),
 
-                  /// Social icons
+                  
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: const [
@@ -178,7 +178,7 @@ class LoginScreen extends StatelessWidget {
   }
 }
 
-/// Reusable social icon widget
+
 class _SocialIcon extends StatelessWidget {
   final String assetPath;
   final IconData fallback;

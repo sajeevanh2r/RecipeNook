@@ -10,14 +10,14 @@ class Onboarding13Screen extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: AppColors.background, // Black background
+      backgroundColor: AppColors.background, 
       body: SafeArea(
         child: Stack(
           children: [
-            // Image Container (Positioned exactly as previous screens)
+            
             Positioned(
               top: 149,
-              left: (screenWidth -300 ) / 2, // Center the 200px image
+              left: (screenWidth -300 ) / 2, 
               child: Container(
                 width: 300,
                 height: 300,
@@ -27,7 +27,7 @@ class Onboarding13Screen extends StatelessWidget {
                 ),
                 child: Builder(
                   builder: (context) {
-                    // Replace with your actual image
+                
                     return Image.asset(
                       'assets/images/image4.png',
                       fit: BoxFit.contain,
@@ -52,23 +52,23 @@ class Onboarding13Screen extends StatelessWidget {
               ),
             ),
 
-            // Main Text Content
+       
             Positioned(
-              top: 500, // Position below image
+              top: 500, 
               left: 0,
               right: 0,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // SERVE Text
+                 
                   const Text(
                     'SERVE',
                     style: TextStyle(
                       fontFamily: 'InriaSerif',
                       fontWeight: FontWeight.w700,
                       fontSize: 48.0,
-                      height: 0.5, // Line height 24px / Font size 48px = 0.5
+                      height: 0.5, 
                       color: AppColors.textWhite,
                     ),
                     textAlign: TextAlign.center,
@@ -76,7 +76,7 @@ class Onboarding13Screen extends StatelessWidget {
 
                   const SizedBox(height: 40),
 
-                  // Description Text
+                 
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 40),
                     child: Text(
@@ -85,8 +85,8 @@ class Onboarding13Screen extends StatelessWidget {
                         fontFamily: 'InriaSerif',
                         fontWeight: FontWeight.w400,
                         fontSize: 14.0,
-                        height: 1.4286, // Line height 20px / Font size 14px = 1.4286
-                        color: AppColors.textWhite, // Grey text as per design
+                        height: 1.4286, 
+                        color: AppColors.textWhite, 
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -95,7 +95,7 @@ class Onboarding13Screen extends StatelessWidget {
               ),
             ),
 
-            // Bottom Navigation (skip, dots, Next)
+            
             Positioned(
               bottom: 60,
               left: 30,
@@ -103,10 +103,10 @@ class Onboarding13Screen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // Skip Button
+                  
                   TextButton(
                     onPressed: () {
-                      context.go('/get_started'); // Direct to Get Started screen
+                      context.go('/get_started'); 
                     },
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,
@@ -119,17 +119,17 @@ class Onboarding13Screen extends StatelessWidget {
                         fontFamily: 'InriaSerif',
                         fontWeight: FontWeight.w700,
                         fontSize: 15.0,
-                        height: 1.3333, // Line height 20px / Font size 15px = 1.3333
-                        color: AppColors.tealLight, // Teal color for skip
+                        height: 1.3333, 
+                        color: AppColors.tealLight, 
                       ),
                     ),
                   ),
 
-                  // Progress Indicators (3 dots)
+                  
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      // Dot 1 (inactive)
+                      
                       Container(
                         width: 30,
                         height: 6,
@@ -139,7 +139,7 @@ class Onboarding13Screen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(3),
                         ),
                       ),
-                      // Dot 2 (inactive)
+                      
                       Container(
                         width: 30,
                         height: 6,
@@ -149,7 +149,7 @@ class Onboarding13Screen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(3),
                         ),
                       ),
-                      // Dot 3 (active)
+                      
                       Container(
                         width: 30,
                         height: 6,
@@ -162,10 +162,10 @@ class Onboarding13Screen extends StatelessWidget {
                     ],
                   ),
 
-                  // Next Button
+                  
                   TextButton(
                     onPressed: () {
-                      context.go('/get_started'); // Go to Get Started screen
+                      context.go('/get_started'); 
                     },
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,
@@ -179,7 +179,7 @@ class Onboarding13Screen extends StatelessWidget {
                         fontWeight: FontWeight.w700,
                         fontSize: 15.0,
                         height: 1.3333,
-                        color: AppColors.tealLight, // Teal color for Next
+                        color: AppColors.tealLight, 
                       ),
                     ),
                   ),

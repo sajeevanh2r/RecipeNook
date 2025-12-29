@@ -25,12 +25,12 @@ class OtpInputField extends StatelessWidget {
         autofocus: true,
         textAlign: TextAlign.center,
         keyboardType: TextInputType.number,
-        // Limit to 1 character
+        
         inputFormatters: [
           LengthLimitingTextInputFormatter(1),
           FilteringTextInputFormatter.digitsOnly,
         ],
-        // Match the Serif font from your UI (numbers 7, 4, 1)
+        
         style: const TextStyle(
           fontFamily: 'InriaSerif',
           fontSize: 28,
@@ -39,17 +39,17 @@ class OtpInputField extends StatelessWidget {
         ),
         onChanged: (value) {
           if (value.length == 1 && !last) {
-            // Move focus to the next box
+            
             FocusScope.of(context).nextFocus();
           }
           if (value.isEmpty && !first) {
-            // Move focus back to the previous box
+            
             FocusScope.of(context).previousFocus();
           }
         },
         decoration: InputDecoration(
           filled: true,
-          fillColor: AppColors.inputFieldBackground, // White
+          fillColor: AppColors.inputFieldBackground, 
           contentPadding: EdgeInsets.zero,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(AppSizes.radiusM),

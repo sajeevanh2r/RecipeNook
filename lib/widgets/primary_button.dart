@@ -20,7 +20,7 @@ class PrimaryButton extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor:Color(0xFFFBB03B),
-          foregroundColor: Colors.black, // Text color
+          foregroundColor: Colors.black, 
           elevation: 0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(AppSizes.radiusM),

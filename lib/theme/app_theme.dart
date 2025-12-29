@@ -3,7 +3,7 @@ import '../constants/app_colors.dart';
 import '../constants/app_sizes.dart';
 
 class AppTheme {
-  // Define Font Names (Matching your pubspec.yaml exactly)
+ 
   static const String _serifFont = 'InriaSerif';
   static const String _sansFont = 'Poppins';
 
@@ -12,13 +12,9 @@ class AppTheme {
       useMaterial3: true,
       brightness: Brightness.dark,
       scaffoldBackgroundColor: AppColors.background,
-      
-      // Default font for the app is Poppins (Sans-Serif)
       fontFamily: _sansFont,
-
-      // Updated Text Theme for Inria Serif Headings
       textTheme: const TextTheme(
-        // Used for "Cooking Delicious Like a Chef" & "You've Got Mail"
+       
         headlineLarge: TextStyle(
           fontFamily: _serifFont,
           fontSize: 32,
@@ -27,7 +23,7 @@ class AppTheme {
           height: 1.2,
         ),
         
-        // Used for "COOK", "LEARN", "SERVE" & "Login" / "Sign Up" titles
+        
         displayMedium: TextStyle(
           fontFamily: _serifFont,
           fontSize: 28,
@@ -36,15 +32,15 @@ class AppTheme {
           color: AppColors.textWhite,
         ),
 
-        // Used for OTP Numbers (7, 4, 1) to give them that Serif look
+        
         displayLarge: TextStyle(
           fontFamily: _serifFont,
           fontSize: 24,
           fontWeight: FontWeight.bold,
-          color: Colors.black, // Since OTP boxes are white
+          color: Colors.black, 
         ),
 
-        // Used for sub-headers and descriptions
+        
         bodyMedium: TextStyle(
           fontFamily: _sansFont,
           fontSize: 14,
@@ -52,7 +48,7 @@ class AppTheme {
           height: 1.5,
         ),
 
-        // Used for Button labels
+        
         labelLarge: TextStyle(
           fontFamily: _sansFont,
           fontSize: 16,
@@ -60,7 +56,7 @@ class AppTheme {
         ),
       ),
 
-      // Input Decoration (White background with rounded corners)
+      
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: AppColors.inputFieldBackground,
@@ -84,7 +80,7 @@ class AppTheme {
         ),
       ),
 
-      // Elevated Button (Orange Buttons)
+      
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.primaryOrange,
@@ -101,7 +97,7 @@ class AppTheme {
         ),
       ),
 
-      // Text Button (Teal Links like "Skip" or "Sign up")
+      
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
           foregroundColor: AppColors.tealLight,

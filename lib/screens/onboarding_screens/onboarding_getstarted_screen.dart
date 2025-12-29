@@ -18,7 +18,7 @@ class GetStartedScreen extends StatelessWidget {
         height: double.infinity,
         child: Stack(
           children: [
-            // 1. Food Image
+           
             Positioned(
               top: 85,
               left: -150,
@@ -39,7 +39,7 @@ class GetStartedScreen extends StatelessWidget {
               ),
             ),
 
-            // 2. Title Texts
+           
             Positioned(
               top: 490,
               left: 35,
@@ -53,7 +53,7 @@ class GetStartedScreen extends StatelessWidget {
               ),
             ),
 
-            // 3. Description
+          
             Positioned(
               top: 660,
               left: 40,
@@ -68,7 +68,7 @@ class GetStartedScreen extends StatelessWidget {
               ),
             ),
 
-            // 4. Primary Button (Reusable)
+           
             Positioned(
               bottom: 120,
               left: 35,

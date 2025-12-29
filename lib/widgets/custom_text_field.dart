@@ -19,7 +19,7 @@ class CustomTextField extends StatefulWidget {
 }
 
 class _CustomTextFieldState extends State<CustomTextField> {
-  bool _obscureText = true; // Internal state to track visibility
+  bool _obscureText = true; 
 
   @override
   void initState() {
@@ -43,7 +43,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           borderRadius: BorderRadius.circular(AppSizes.radiusM),
           borderSide: BorderSide.none,
         ),
-        // Suffix icon logic
+        
         suffixIcon: widget.isPassword
             ? IconButton(
                 icon: Icon(
@@ -53,7 +53,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 ),
                 onPressed: () {
                   setState(() {
-                    _obscureText = !_obscureText; // Toggle state
+                    _obscureText = !_obscureText; 
                   });
                 },
               )
